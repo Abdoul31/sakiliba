@@ -1,0 +1,5 @@
+package rg.ad.elit.web;
+
+public class BankController {
+
+}

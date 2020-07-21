@@ -1,0 +1,53 @@
+package org.ad.elit.service;
+
+import org.ad.elit.DAO.CompteRepository;
+import org.ad.elit.entities.Compte;
+import org.ad.elit.entities.Operation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+//	INSTANCIATION DES CLASS AU DEMARRAGE
+@Service
+@Transactional
+
+public class ImplBanqueService implements IntBankService {
+	//		COUCHE DAO POUR CNSULTER UN COMPTE
+	//		AUTOWIRED INJECTION DES DEPENDENCES
+	@Autowired
+		private CompteRepository compteRepository;
+	@Override
+	public Compte consulterCompte(String numeroCompte) {
+		Compte cp = compteRepository.findOne(numeroCompte);
+		//	MESSAGE D'EURREUR 
+		if(cp==null) throw new RuntimeException("Compte introuvable");
+		
+		return cp;
+	}
+
+	@Override
+	public void verser(String numeroCompte, Double montant) {
+		Compte cp;
+		
+		
+	}
+
+	@Override
+	public void retirer(String numeroCompte, Double montant) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void virement(String numeroCompte1, String numeroCompte2, Double montant) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Page<Operation> listOperation(String numeroCompte, int page, int size) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

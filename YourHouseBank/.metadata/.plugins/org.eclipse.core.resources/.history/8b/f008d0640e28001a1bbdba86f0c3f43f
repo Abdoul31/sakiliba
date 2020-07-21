@@ -1,0 +1,44 @@
+package org.ad.elit;
+import java.util.Date;
+
+import org.ad.elit.DAO.ClientRepository;
+import org.ad.elit.DAO.CompteRepository;
+import org.ad.elit.entities.Client;
+import org.ad.elit.entities.Compte;
+import org.ad.elit.entities.CompteCourant;
+import org.ad.elit.entities.CompteEpargne;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
+@Configuration
+@EnableAutoConfiguration
+@SpringBootApplication
+public class YourHouseBankApplication implements CommandLineRunner {
+		@Autowired	
+		private ClientRepository clientRepository;
+		@Autowired
+		private CompteRepository compteRepository;
+		
+	public static void main(String[] args) {
+		SpringApplication.run(YourHouseBankApplication.class, args);
+	}
+	@Override
+	public void run(String... args) throws Exception {
+				Client c1 = clientRepository.save(new Client(
+						"13 Rue Concorde", "tonton@gmail.com","Tonton", "Bam", "0712437532"));
+					Client c2 = clientRepository.save(new Client(
+						"Rue mumia", "mumiab@gmail.com","Mumia", "Abu", "06453412"));
+				//
+				Compte cp1 = compteRepository.save(new CompteCourant(
+						"c1", new Date(), 3300.0, c1, 200.0));
+				
+					Compte cp2= compteRepository.save(
+								new CompteEpargne("c2", new Date(),600.5,c2,2.1));
+				
+				
+}
+		
+}

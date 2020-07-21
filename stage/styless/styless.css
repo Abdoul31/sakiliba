@@ -1,0 +1,225 @@
+body
+{
+	font-family: 'Century Gothic' calibri, serif;
+	margin: 0px;
+	padding: 0px;
+	background-image: url('imgs/school.jpg');
+	/*color: white;*/
+	/*background-size:900px;*/
+}
+nav > ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+header
+{
+	
+
+}
+nav > ul > li
+{
+	display : inline-block;
+	
+}
+/*pour positionnement des sous-menu*/
+nav > ul > li{
+	float: right;
+	position: relative;
+}
+nav > ul::after
+{
+	content:"";
+	display:block;
+	clear:both;
+
+}
+/*nav > ul
+{
+	margin: 0px;
+	padding: 0px;
+}*/
+nav li
+{
+	list-style-type: none;
+	padding-right: 20px 0px 0px 20px;
+	margin:0px;
+}
+.sumenu
+{
+	display: none;
+}
+nav li:hover .sumenu
+{
+	display: inline-block;
+	position: absolute;
+	top:100% ;
+	left: 0px;
+	padding: 0px;
+	z-index: 100000;
+}
+nav ul
+{
+	/*text-align: center;
+	margin: 30px 30px ;*/
+}
+nav > ul > li > a
+{
+	padding: 20px 30px;
+	color:;
+}
+
+
+nav a
+{
+	display:inline-block;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	margin-left:30px;
+}
+
+
+nav
+{
+	width: 100%;
+	background-color: #00bfd6;
+	/*border:1px solid black;
+	text-align: center;
+*/
+}
+.sumenu li
+{
+	border-bottom: 0px solid black;
+}
+.sumenu li a
+{
+	padding :2px 10px;
+	font-size: 20px;
+	color: #003f5d;
+	background-color: white;
+}
+/*nav a*/
+/*{
+	font-size : 1.5em;
+	text-decoration : none;
+	color : black;
+	margin : 30px 30px;
+	padding: 40px;
+}*/
+h1
+{
+	margin-left: 40%;
+}
+table 
+{
+	margin-top: 30px;
+	border-collapse: collapse;	
+}
+center td
+{
+	border: 1px solid black;
+	padding:20px;
+}
+fieldset
+{
+	background-color:rgba(0,25,36,0.2);
+
+}
+legend
+{
+	font-weight: bold;
+}
+/********************PIED DE PAGE**********************/
+.pied
+{
+	width: 100%;
+	height: 200px;
+	margin: 0px;
+	position:;
+	background-color: #631616;
+	color: #eef3ff;
+	text-align: center;
+/*border: 1px solid white;*/
+}
+
+.foot
+{
+	background-color: inherit;
+	/*position: absolute;*/
+	margin:0px;
+}
+.line
+{
+	margin-top: 0px;	
+}
+.line  li
+{
+	display: inline-block;
+	text-align: center;
+	padding: 0px 5%;
+
+}
+li p
+{
+	/*border: 0px solid white;*/
+	font-size: 13px;
+}
+/*********************CONCTACT******************/
+center > p
+{
+	display: inline-block;
+}	
+.pass
+{
+	margin-left: 200px;
+}
+.nom > input
+{
+	width: 300px;
+}
+.pass > input 
+{
+	width: 300px;
+}
+.contour
+{
+	margin-top: 100px;
+}
+.msg
+{
+	margin-right: 34%;
+}
+section
+{
+
+}
+.form
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 430px;
+	height:400px;
+	background-color: rgba(0,17,25,0.5);
+	border: 3px solid black;
+}
+.form  p
+{
+	/*margin-right: auto;*/
+	margin-left: 140px;
+}
+/******************************IDENTIFICATION********************/
+.identif
+{
+	width: 100%;
+	height: 25px;
+	background-color: black;
+}
+.identif a
+{
+	text-decoration: none;
+	color: white;
+	/*margin-left: 60%;*/
+}
+
+

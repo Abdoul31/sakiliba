@@ -1,0 +1,15 @@
+package rg.ad.elit.web;
+
+import org.ad.elit.metier.IBankService;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class BankController {
+		private IBankService BankServiceImpl;
+		//L'ACCES AU METHODE INDEX VUE
+		@RequestMapping("/operation")
+	public String index() {
+		return "compte"; 
+	}
+}
